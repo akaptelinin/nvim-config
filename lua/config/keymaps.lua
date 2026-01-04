@@ -41,3 +41,8 @@ vim.keymap.set("n", "cc", [["_cc]], { noremap = true })
 vim.keymap.set("n", "C", [["_C]], { noremap = true })
 
 vim.keymap.set("n", "<leader>h", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, desc = "Search & replace word" })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zb", { noremap = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zt", { noremap = true })
+vim.keymap.set("n", "<C-f>", "<C-f>zb", { noremap = true })
+vim.keymap.set("n", "<C-b>", "<C-b>zt", { noremap = true })
