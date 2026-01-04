@@ -10,5 +10,20 @@ vim.keymap.set('t', '<Esc>', '<Esc>', { noremap = true })
 vim.keymap.set('t', '<A-[>', '<A-[>', { noremap = true })
 
 vim.keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true })
+vim.keymap.set('t', '<C-х>', '<C-\\><C-n>', { noremap = true })
 
 vim.keymap.set({ "n", "x" }, "s", "s", { noremap = true, desc = "Substitute char" })
+
+vim.keymap.set({ "i", "v", "n", "o", "c" }, "<C-х>", "<Esc>", { noremap = true })
+
+vim.keymap.set({ "n", "v" }, "Ж", ":", { noremap = true })
+
+vim.keymap.set("n", "<leader>ц", "<leader>w", { remap = true })
+
+vim.keymap.set("n", "j", "gj", { noremap = true })
+vim.keymap.set("n", "k", "gk", { noremap = true })
+vim.keymap.set("n", "о", "gj", { noremap = true })
+vim.keymap.set("n", "л", "gk", { noremap = true })
+
+vim.keymap.set("n", "<leader>[", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>]", "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>", { noremap = true, silent = true })
