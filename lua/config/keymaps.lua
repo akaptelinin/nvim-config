@@ -27,3 +27,17 @@ vim.keymap.set("n", "л", "gk", { noremap = true })
 
 vim.keymap.set("n", "<leader>[", "<Cmd>call append(line('.') - 1, repeat([''], v:count1))<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>]", "<Cmd>call append(line('.'), repeat([''], v:count1))<CR>", { noremap = true, silent = true })
+
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { noremap = true, desc = "Yank to clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { noremap = true, desc = "Yank line to clipboard" })
+
+vim.keymap.set({ "n", "v" }, "<leader>d", "d", { noremap = true, desc = "Delete to register" })
+vim.keymap.set({ "n", "v" }, "d", [["_d]], { noremap = true })
+vim.keymap.set("n", "dd", [["_dd]], { noremap = true })
+vim.keymap.set("n", "D", [["_D]], { noremap = true })
+vim.keymap.set({ "n", "v" }, "x", [["_x]], { noremap = true })
+vim.keymap.set({ "n", "v" }, "c", [["_c]], { noremap = true })
+vim.keymap.set("n", "cc", [["_cc]], { noremap = true })
+vim.keymap.set("n", "C", [["_C]], { noremap = true })
+
+vim.keymap.set("n", "<leader>h", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, desc = "Search & replace word" })
