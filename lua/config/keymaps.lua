@@ -45,7 +45,4 @@ vim.keymap.set("n", "<leader>h", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("x", "p", [["_dP]], { noremap = true })
 vim.keymap.set("x", "<leader>p", "p", { noremap = true, desc = "Paste (overwrite register)" })
 
-vim.keymap.set("n", "<C-d>", "<C-d>zb", { noremap = true })
-vim.keymap.set("n", "<C-u>", "<C-u>zt", { noremap = true })
-vim.keymap.set("n", "<C-f>", "<C-f>zb", { noremap = true })
-vim.keymap.set("n", "<C-b>", "<C-b>zt", { noremap = true })
+vim.keymap.set("n", "<leader>T", "<cmd>terminal<cr>", { noremap = true, desc = "Terminal" })
