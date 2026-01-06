@@ -3,11 +3,11 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        -- tsgo: новый TS LSP на Go от Microsoft (быстрее в 10x)
+        -- tsgo: new TS LSP in Go from Microsoft (10x faster)
         -- npm install -g @typescript/native-preview
         tsgo = {},
 
-        -- отключаем старые TS серверы:
+        -- disable old TS servers:
         vtsls = { enabled = false },
         ts_ls = { enabled = false },
         tsserver = { enabled = false },
