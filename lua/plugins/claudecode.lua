@@ -19,6 +19,10 @@ return {
       refresh = {
         enable = true,
       },
+      keymaps = {
+        window_navigation = false,
+        scrolling = false,
+      },
     },
     keys = {
       { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
