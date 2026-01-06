@@ -20,7 +20,16 @@ local function update_layout(data)
     current_layout = layout
     vim.schedule(function()
       require("lualine").refresh()
-      vim.cmd("redraw")
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        local buf = vim.api.nvim_win_get_buf(win)
+        if vim.bo[buf].filetype == "wk" then
+          -- dirtiest fucking hack to fix desync during which-key popup open
+          pcall(function() Snacks.notifier.hide() end)
+          local short = current_layout:match("[^.]+$") or current_layout
+          vim.notify(short, vim.log.levels.DEBUG)
+          break
+        end
+      end
     end)
   end
 end
