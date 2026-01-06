@@ -19,7 +19,7 @@ local function update_layout(data)
   if layout ~= "" and layout ~= current_layout then
     current_layout = layout
     vim.schedule(function()
-      vim.cmd("redrawstatus")
+      require("lualine").refresh()
     end)
   end
 end
