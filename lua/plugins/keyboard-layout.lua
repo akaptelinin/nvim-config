@@ -20,6 +20,7 @@ local function update_layout(data)
     current_layout = layout
     vim.schedule(function()
       require("lualine").refresh()
+      vim.cmd("redraw")
     end)
   end
 end
