@@ -11,6 +11,7 @@ return {
         vtsls = { enabled = false },  -- закомментить если tsgo глючит
         ts_ls = { enabled = false },     -- обёртка над tsserver
         tsserver = { enabled = false },  -- оригинальный от MS
+
       },
     },
   },
