@@ -1,32 +1,26 @@
 return {
-  -- отключаем coder/claudecode.nvim (LazyVim extra)
+  -- disable LazyVim extra claudecode.nvim
   { "coder/claudecode.nvim", enabled = false },
 
-  -- включаем greggh/claude-code.nvim
+  -- our fork based on coder/claudecode.nvim with diff feature removed
   {
-    "greggh/claude-code.nvim",
+    "akaptelinin/claude-code.nvim",
+    commit = "6ba5f37f1ebdb249166d7896082a29f6c70af161",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
-      command = "claude --dangerously-skip-permissions",
-      window = {
-        position = "horizontal",
-        split_ratio = 0.4,
-        enter_insert = true,
-      },
-      git = {
-        use_git_root = true,
-      },
-      refresh = {
-        enable = true,
-      },
-      keymaps = {
-        window_navigation = false,
-        scrolling = false,
+      terminal_cmd = "claude --dangerously-skip-permissions",
+      terminal = {
+        split_side = "bottom",
+        split_width_percentage = 0.5,
+        provider = "native",
       },
     },
+    lazy = false,
     keys = {
       { "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
       { "<C-,>", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude", mode = { "n", "t" } },
+      { "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "n", desc = "Send to Claude" },
+      { "<leader>as", ":<C-u>ClaudeCodeSend<cr>", mode = "v", desc = "Send selection to Claude" },
     },
   },
 }
