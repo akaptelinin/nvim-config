@@ -44,3 +44,5 @@ vim.keymap.set("x", "p", [["_dP]], { noremap = true })
 vim.keymap.set("x", "<leader>p", "p", { noremap = true, desc = "Paste (overwrite register)" })
 
 vim.keymap.set("n", "<leader>T", "<cmd>terminal<cr>", { noremap = true, desc = "Terminal" })
+
+vim.keymap.set("n", "<leader>bn", "<cmd>enew<cr>", { noremap = true, desc = "New buffer" })
