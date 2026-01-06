@@ -12,8 +12,6 @@ vim.keymap.set('t', '<A-[>', '<A-[>', { noremap = true })
 vim.keymap.set('t', '<C-[>', '<C-\\><C-n>', { noremap = true })
 vim.keymap.set('t', '<C-х>', '<C-\\><C-n>', { noremap = true })
 
-vim.keymap.set({ "n", "x" }, "s", "s", { noremap = true, desc = "Substitute char" })
-
 vim.keymap.set({ "i", "v", "n", "o", "c" }, "<C-х>", "<Esc>", { noremap = true })
 
 vim.keymap.set({ "n", "v" }, "Ж", ":", { noremap = true })
