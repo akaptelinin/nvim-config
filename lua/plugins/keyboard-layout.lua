@@ -73,7 +73,7 @@ return {
   opts = function(_, opts)
     table.insert(opts.sections.lualine_x, 1, {
       function()
-        return is_ru() and "RU" or ""
+        return is_ru() and "RUSSIAN_LAYOUT" or ""
       end,
       color = { fg = "red" },
     })
