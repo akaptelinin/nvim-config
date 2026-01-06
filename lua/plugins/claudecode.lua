@@ -5,7 +5,7 @@ return {
   -- our fork based on coder/claudecode.nvim with diff feature removed
   {
     "akaptelinin/claude-code.nvim",
-    commit = "c2cce0b",
+    commit = "9c7ab33",
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       terminal_cmd = "claude --dangerously-skip-permissions",
