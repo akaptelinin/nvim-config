@@ -8,10 +8,18 @@ return {
         tsgo = {},
 
         -- отключаем старые TS серверы:
-        vtsls = { enabled = false },  -- закомментить если tsgo глючит
-        ts_ls = { enabled = false },     -- обёртка над tsserver
-        tsserver = { enabled = false },  -- оригинальный от MS
+        vtsls = { enabled = false },
+        ts_ls = { enabled = false },
+        tsserver = { enabled = false },
 
+        -- CSS/LESS/SCSS
+        cssls = {
+          settings = {
+            css = { validate = true },
+            scss = { validate = true },
+            less = { validate = true },
+          },
+        },
       },
     },
   },
