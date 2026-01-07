@@ -1,3 +1,15 @@
+-- inlay hints: visual noise in well-written code, useful for unfamiliar codebases
+local enable_inlay_hints = false
+
+local inlay_hints_settings = enable_inlay_hints and {
+  parameterNames = { enabled = "all" },
+  parameterTypes = { enabled = true },
+  variableTypes = { enabled = true },
+  propertyDeclarationTypes = { enabled = true },
+  functionLikeReturnTypes = { enabled = true },
+  enumMemberValues = { enabled = true },
+} or nil
+
 return {
   {
     "neovim/nvim-lspconfig",
@@ -7,26 +19,8 @@ return {
         -- npm install -g @typescript/native-preview
         tsgo = {
           settings = {
-            typescript = {
-              inlayHints = {
-                parameterNames = { enabled = "all" },
-                parameterTypes = { enabled = true },
-                variableTypes = { enabled = true },
-                propertyDeclarationTypes = { enabled = true },
-                functionLikeReturnTypes = { enabled = true },
-                enumMemberValues = { enabled = true },
-              },
-            },
-            javascript = {
-              inlayHints = {
-                parameterNames = { enabled = "all" },
-                parameterTypes = { enabled = true },
-                variableTypes = { enabled = true },
-                propertyDeclarationTypes = { enabled = true },
-                functionLikeReturnTypes = { enabled = true },
-                enumMemberValues = { enabled = true },
-              },
-            },
+            typescript = { inlayHints = inlay_hints_settings },
+            javascript = { inlayHints = inlay_hints_settings },
           },
         },
 
