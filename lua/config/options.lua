@@ -4,4 +4,15 @@
 
 vim.g.snacks_animate = false
 
+local original_vt_handler = vim.diagnostic.handlers.virtual_text
+vim.diagnostic.handlers.virtual_text = {
+  show = function(ns, bufnr, diagnostics, opts)
+    local filtered = vim.tbl_filter(function(d)
+      return not (d._tags and d._tags.deprecated)
+    end, diagnostics)
+    original_vt_handler.show(ns, bufnr, filtered, opts)
+  end,
+  hide = original_vt_handler.hide,
+}
+
 vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
