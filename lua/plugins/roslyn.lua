@@ -4,6 +4,7 @@ return {
     opts = {
       servers = {
         omnisharp = { enabled = false },
+        fsautocomplete = { enabled = false },
       },
     },
   },
