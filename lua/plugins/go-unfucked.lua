@@ -5,9 +5,7 @@ return {
     import_hints = {
       enabled = true,
     },
-    receiver_highlight = {
-      color = "#ff757f",
-    },
+    receiver_highlight = {},
     error_dim = {
       enabled = true,
       dim_simple_return = true,
