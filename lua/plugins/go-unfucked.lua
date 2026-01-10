@@ -6,7 +6,7 @@ return {
       enabled = true,
     },
     receiver_highlight = {
-      color = "#ff9900",
+      color = "#ff757f",
     },
     error_dim = {
       enabled = true,
