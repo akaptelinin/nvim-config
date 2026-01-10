@@ -10,8 +10,7 @@ return {
       enabled = true,
       dim_simple_return = true,
       dim_wrapped_return = true,
-      dim_color = "#666666",
-      dim_blend = 60,
+      dim_percent = 50,
     },
     shortnames = {
       enabled = true,
