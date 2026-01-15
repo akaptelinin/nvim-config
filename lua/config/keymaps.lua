@@ -46,3 +46,17 @@ vim.keymap.set("x", "<leader>p", "p", { noremap = true, desc = "Paste (overwrite
 vim.keymap.set("n", "<leader>T", "<cmd>terminal<cr>", { noremap = true, desc = "Terminal" })
 
 vim.keymap.set("n", "<leader>bn", "<cmd>enew<cr>", { noremap = true, desc = "New buffer" })
+
+-- Navigate to next/prev brackets (using f/F which work file-wide via flash.nvim)
+vim.keymap.set("n", "](", "f(<Esc>", { remap = true, desc = "Next (" })
+vim.keymap.set("n", "[(", "F(<Esc>", { remap = true, desc = "Prev (" })
+vim.keymap.set("n", "])", "f)<Esc>", { remap = true, desc = "Next )" })
+vim.keymap.set("n", "[)", "F)<Esc>", { remap = true, desc = "Prev )" })
+vim.keymap.set("n", "]{", "f{<Esc>", { remap = true, desc = "Next {" })
+vim.keymap.set("n", "[{", "F{<Esc>", { remap = true, desc = "Prev {" })
+vim.keymap.set("n", "]}", "f}<Esc>", { remap = true, desc = "Next }" })
+vim.keymap.set("n", "[}", "F}<Esc>", { remap = true, desc = "Prev }" })
+vim.keymap.set("n", "]<", "f<<Esc>", { remap = true, desc = "Next <" })
+vim.keymap.set("n", "[<", "F<<Esc>", { remap = true, desc = "Prev <" })
+vim.keymap.set("n", "]>", "f><Esc>", { remap = true, desc = "Next >" })
+vim.keymap.set("n", "[>", "F><Esc>", { remap = true, desc = "Prev >" })
